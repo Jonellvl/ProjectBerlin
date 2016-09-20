@@ -48,26 +48,20 @@ var app = {
     }
 };
 
-// function showDeviceInfo() {
-//   alert("Platform: " + device.platform + " Version: " + device.version + " model: " + device.model + " Cordova Version: " + device.cordova);
-// }
-
-// document.addEventListener("deviceready", function(){
-//       alert(showDeviceInfo());
-//  },true);
-
-function getCurrentLocation() {
+function getCurrentLocation() { // haal de current locatie op.
   navigator.geolocation.getCurrentPosition(onSuccess, onError);
 }
 
-function onSuccess(position) {
+function onSuccess(position) { // als de locatie goed is opgehaald
   var longitude = position.coords.longitude;
   var latitude = position.coords.latitude;
-  var timestamp = position.timestamp;
-
-  alert(" longitude: " + " latitude: " + latitude + " timestamp: " + timestamp);
+  alert("longitude: " + longitude + " latitude: " + latitude);
 }
 
-function onError(error) {
-  alert(" code: " + error.code + " message: " + error.message)
+function onError(error) { // als de locatie niet is opgehaald
+  alert(" code: " + error.code + " message: " + error.message);
 }
+
+setInterval(function() { // Om de 3 seconden bijhouden waar de gebruiker is
+  getCurrentLocation();
+}, 3000);
