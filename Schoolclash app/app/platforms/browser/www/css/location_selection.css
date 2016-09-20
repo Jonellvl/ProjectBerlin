@@ -1,5 +1,6 @@
 body {
   background: #fff;
+  margin: 0;
 }
 .header .slider .slide-item {
   width: 100%;
@@ -20,4 +21,8 @@ body {
   color: #484848;
   font-size: 15px;
   text-transform: none;
+}
+.location-list .location {
+  padding: 15px;
+  background-color: #f2f2f2;
 }
