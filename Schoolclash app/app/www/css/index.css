@@ -23,17 +23,10 @@ body {
     width:100%;
 }
 
-select {
-background-color: red;
-width: 100%;
-margin:0 auto;
-border-radius: 0px;
-border:none;
-color:grey;
-background-color: white;
-font-size: 15px;
-text-decoration: none;
-padding:20px;
+.styled-select select {
+    appearance:none;
+    -moz-appearance:none; /* Firefox */
+    -webkit-appearance:none; /* Safari and Chrome */
 }
 
 option {
